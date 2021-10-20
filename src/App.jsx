@@ -2,6 +2,7 @@ import { Toaster } from "react-hot-toast";
 import { Switch, Route, Link } from "react-router-dom";
 import { CountriesPage } from "pages/CountriesPage";
 import { PostsPage } from "pages/PostsPage";
+import { TodosPage } from "pages/TodosPage";
 
 export const App = () => {
   return (
@@ -13,6 +14,9 @@ export const App = () => {
         <li>
           <Link to="/posts">Посты</Link>
         </li>
+        <li>
+          <Link to="/todos">Todo</Link>
+        </li>
       </ul>
       <Switch>
         <Route path="/countries">
@@ -20,6 +24,9 @@ export const App = () => {
         </Route>
         <Route path="/posts">
           <PostsPage />
+        </Route>
+        <Route path="/todos">
+          <TodosPage />
         </Route>
       </Switch>
       <Toaster position="top-right" />
