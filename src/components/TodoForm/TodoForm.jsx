@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { nanoid } from "nanoid";
 // import { addTodo } from "../../redux/actions/todos";
-import { addTodo } from "redux/slices/todos";
+import { createTodo } from "redux/slices/todos";
 
 const formInitialState = {
   title: "",
@@ -24,8 +24,8 @@ const TodoForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    form.id = nanoid();
-    dispatch(addTodo(form));
+    // form.id = nanoid();
+    dispatch(createTodo(form));
     setForm(formInitialState);
   };
 
