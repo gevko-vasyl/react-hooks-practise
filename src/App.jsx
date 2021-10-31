@@ -3,6 +3,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import { CountriesPage } from "pages/CountriesPage";
 import { PostsPage } from "pages/PostsPage";
 import { TodosPage } from "pages/TodosPage";
+import Stopwatch from "components/Stopwatch/Stopwatch";
 
 export const App = () => {
   return (
@@ -17,6 +18,9 @@ export const App = () => {
         <li>
           <Link to="/todos">Todo</Link>
         </li>
+        <li>
+          <Link to="/stopwatch">Stopwatch</Link>
+        </li>
       </ul>
       <Switch>
         <Route path="/countries">
@@ -27,6 +31,9 @@ export const App = () => {
         </Route>
         <Route path="/todos">
           <TodosPage />
+        </Route>
+        <Route path="/stopwatch">
+          <Stopwatch />
         </Route>
       </Switch>
       <Toaster position="top-right" />
